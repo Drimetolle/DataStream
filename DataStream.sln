@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30621.155
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStream", "DataStream\DataStream.csproj", "{7EF445B9-A463-479A-A811-201E23BCB76B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7EF445B9-A463-479A-A811-201E23BCB76B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EF445B9-A463-479A-A811-201E23BCB76B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EF445B9-A463-479A-A811-201E23BCB76B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EF445B9-A463-479A-A811-201E23BCB76B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E8E78F5D-86C6-47FC-980A-E0F86DC1AEC0}
+	EndGlobalSection
+EndGlobal
