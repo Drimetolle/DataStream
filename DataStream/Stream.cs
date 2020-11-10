@@ -13,6 +13,10 @@ namespace DataStream
         private bool _lock2;
         private readonly int _tick;
 
+        /// <summary>
+        /// Буфер потока. При обращении очищается. Обращение потокобезопасно переменная _lock указывает на обращение к свойству Buffer,
+        /// _lock2 указывает завершена ли запись в буффер и чтение из файла.
+        /// </summary>
         public IEnumerable<string> Buffer
         {
             get
@@ -21,7 +25,7 @@ namespace DataStream
 
                 while (_lock2)
                 {
-                    // await
+                    // ждет пока чтение из файла и запись в буфер закончится.
                 }
 
                 var clonedBuffer = _buffer.ToList();
@@ -55,6 +59,9 @@ namespace DataStream
             Id = id;
         }
 
+        /// <summary>
+        /// Читает из файла и записывает в буфер.
+        /// </summary>
         public void ReadStream()
         {
             var trThread = new Thread(() =>
