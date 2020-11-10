@@ -14,6 +14,10 @@ namespace DataStream
             _manager = new FileManager();
         }
 
+        /// <summary>
+        /// Возвращает данные из потока пачкой заданного размера (_size).
+        /// </summary>
+        /// <returns></returns>
         public IEnumerable<IEnumerable<KeyValuePair<string, string>>> GetDataBulk()
         {
             var window = new List<KeyValuePair<string, string>>();
@@ -35,6 +39,11 @@ namespace DataStream
                 }
             }
         }
+
+        /// <summary>
+        /// Получает данные из всех потоков и возвращает первую полученную порцию данных.
+        /// </summary>
+        /// <returns></returns>
         private IEnumerable<KeyValuePair<string, string>> GetDataOfStreams()
         {
             var factory = new StreamFactory(_manager.FilesPaths);

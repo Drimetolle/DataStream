@@ -11,6 +11,9 @@ namespace DataStream
 
         public List<string> FilesPaths => _filesInfo.Select(_ => _.FullName).ToList();
 
+        /// <summary>
+        /// Получает список всех файлов из дериктории с расширением .txt
+        /// </summary>
         public FileManager()
         {
             var dataDirectory = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName + @"\Data";
