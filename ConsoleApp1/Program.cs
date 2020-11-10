@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace ConsoleApp1
 {
@@ -7,22 +6,13 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            var factory = new StreamFactory(new List<string>()
-            {
-                @"C:\Users\drime\AppData\Roaming\source\repos\DataStream\Data\1.txt",
-                @"C:\Users\drime\AppData\Roaming\source\repos\DataStream\Data\2.txt"
-            });
+            var a = new Сonsumer(2);
 
-            var ids = factory.StartStreams();
-
-            while (true)
+            foreach (var s in a.GetDataBulk())
             {
-                foreach (var id in ids)
+                foreach (var keyValuePair in s)
                 {
-                    foreach (var data in factory.GetDataByStreamId(id))
-                    {
-                        Console.WriteLine(id + ": " + data);
-                    }
+                    Console.WriteLine(keyValuePair.Key + ": " + keyValuePair.Value);
                 }
             }
         }
