@@ -16,7 +16,7 @@ namespace DataStream
         /// </summary>
         public FileManager()
         {
-            var dataDirectory = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName + @"\Data";
+            var dataDirectory = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName + @"\Data\source";
             var directory = new DirectoryInfo(dataDirectory);
             _filesInfo = directory.GetFiles("*.txt").ToList();
         }

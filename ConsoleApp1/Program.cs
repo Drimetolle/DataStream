@@ -1,4 +1,5 @@
 ﻿using System;
+using DataStream;
 
 namespace ConsoleApp1
 {
@@ -6,7 +7,7 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            var a = new Сonsumer(2);
+            var a = new Consumer(10);
 
             foreach (var s in a.GetDataBulk())
             {

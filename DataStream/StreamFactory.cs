@@ -1,21 +1,21 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 namespace DataStream
 {
     public class StreamFactory
     {
-        private readonly List<Stream> _streams;
+        private readonly List<DataStream> _streams;
 
         public StreamFactory(IEnumerable<string> paths)
         {
-            _streams = new List<Stream>();
-            var i = 0;
+            _streams = new List<DataStream>();
 
             foreach (var path in paths)
             {
-                _streams.Add(new Stream(i.ToString(), path));
-                i++;
+                _streams.Add(new DataStream(Path.GetFileName(path).Replace(".txt", ""), path));
             }
         }
 
@@ -29,7 +29,7 @@ namespace DataStream
         {
             foreach (var stream in _streams)
             {
-                stream.ReadStream();
+                stream.StartStream();
             }
 
             return StreamsId;
