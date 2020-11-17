@@ -58,7 +58,6 @@
     <Compile Include="DataStream.cs" />
     <Compile Include="StreamFactory.cs" />
     <Compile Include="Consumer.cs" />
-    <Compile Include="Tuple.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
